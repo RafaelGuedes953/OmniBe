@@ -113,7 +113,7 @@ function _cpf(cpf) {
 }
 
 function validarCPF(el){
-    if( !_cpf(el.value) ){
+    if( !_cpf(el.value) && el.value!=""){
   
       alert("Insira um CPF válido!");
   
