@@ -26,7 +26,6 @@ function meu_callback(conteudo) {
 }
 
 function pesquisacep(valor) {
-
     //Nova variável "cep" somente com dígitos.
     var cep = valor.replace(/\D/g, '');
 
@@ -112,12 +111,25 @@ function _cpf(cpf) {
     return true;
 }
 
-function validarCPF(el){
-    if( !_cpf(el.value) && el.value!=""){
-  
-      alert("Insira um CPF válido!");
-  
-      // apaga o valor
-      el.value = "";
+function validarCPF(el) {
+    if (!_cpf(el.value) && el.value != "") {
+
+        alert("Insira um CPF válido!");
+
+        // apaga o valor
+        el.value = "";
     }
-  }
+}
+
+function formataCPF(i) {
+    var v = i.value;
+
+    if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que não seja número
+        i.value = v.substring(0, v.length - 1);
+        return;
+    }
+
+    i.setAttribute("maxlength", "14");
+    if (v.length == 3 || v.length == 7) i.value += ".";
+    if (v.length == 11) i.value += "-";
+}
