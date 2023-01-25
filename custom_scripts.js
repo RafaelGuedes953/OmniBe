@@ -29,9 +29,15 @@ function pesquisacep(valor) {
     //Nova variável "cep" somente com dígitos.
     var cep = valor.replace(/\D/g, '');
 
-    //Verifica se campo cep possui valor informado.
-    if (cep !== "") {
+    //Constantes referentes aos elementos que serão manipulados
+    const cepV = document.getElementById("cep");
+    const rua = document.getElementById("rua");
+    const bairro = document.getElementById("bairro");
+    const cidade = document.getElementById("cidade");
+    const uf = document.getElementById("estado");
 
+    //Verifica se campo cep possui valor informado.
+    if (cep != "") {
         //Expressão regular para validar o CEP.
         var validacep = /^[0-9]{8}$/;
 
@@ -39,19 +45,36 @@ function pesquisacep(valor) {
         if (validacep.test(cep)) {
 
             //Preenche os campos com "..." enquanto consulta webservice.
-            document.getElementById('rua').value = "...";
-            document.getElementById('bairro').value = "...";
-            document.getElementById('cidade').value = "...";
-            document.getElementById('estado').value = "...";
+            rua.value = "...";
+            bairro.value = "...";
+            cidade.value = "...";
+            uf.value = "...";
 
-            //Cria um elemento javascript.
-            var script = document.createElement('script');
+            // Define a URL para a consulta na API
+            url = 'https://viacep.com.br/ws/' + cep + '/json/';
+            console.log(url); //debug confirmando a url definida
 
-            //Sincroniza com o callback.
-            script.src = '//viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", url, false);
+            xhttp.send(); //A execução do script para aqui até a requisição retornar do servidor
+          
+            // Converte resposta da API de string para json
+            dados = JSON.parse(xhttp.responseText);
 
-            //Insere script no documento e carrega o conteúdo.
-            document.body.appendChild(script);
+            console.log(dados); //debug: dados recebidos da api
+
+            if (!("erro" in dados)) {
+                //Atualiza os campos com os valores.
+                rua.value = dados.logradouro;
+                bairro.value = dados.bairro;
+                cidade.value = dados.localidade;
+                uf.value = dados.uf;
+            } else {
+                //CEP não foi Encontrado.
+                limpa_formulario_cep();
+                alert("CEP não encontrado!");
+                cepV.value = ("");
+            }
 
         } //end if.
         else {

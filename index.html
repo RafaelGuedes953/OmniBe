@@ -15,8 +15,9 @@
 
 <body>
     <!-- Div de apresentação -->
-    <div class="container-xl m-4">
-        <!-- Adicionar logo ilustrativa e padding de pelo menos p-5 -->
+    <div class="px-3 py-3 my-5 text-center ">
+        <img class="img-fluid" src="imgs\bemol.svg" alt="" width="200" height="200">
+        <h1 class="display-5 fw-bold">Cadastro de usuário</h1>
     </div>
 
     <!-- Div do form de cadastro -->
@@ -34,7 +35,7 @@
                 <div class="col-md-2">
                     <label class="form-label control-label" for="Nascimento">Nascimento <h11>*</h11></label>
                     <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required=""
-                        type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+                        type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
                 </div>
             </div>
 
@@ -56,15 +57,23 @@
 
             <div class="form-group row g-3 row-cols-7 justify-content-center">
                 <!-- Campo senha-->
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <label for="inputPassword4" class="form-label">Senha <h11>*</h11></label>
                     <input type="password" class="form-control" id="inputPassword4">
                 </div>
 
                 <!-- Campo confirmar senha-->
-                <div class="col-md-3">
+                <!-- <div class="col-md-4">
                     <label for="inputPassword4" class="form-label">Confirmar senha <h11>*</h11></label>
                     <input type="password" class="form-control" id="inputPassword4">
+                </div> -->
+
+                <!-- Campo telefone-->
+                <div class="col-md-4">
+                    <label class="form-label control-label" for="prependedtext">Telefone <h11>*</h11></label>
+                    <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX"
+                        type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
+                        OnKeyPress="formatar('## #####-####', this)" required>
                 </div>
             </div>
 
@@ -74,15 +83,16 @@
                 <div class="col-md-2">
                     <label class="form-label control-label" for="CEP">CEP <h11>*</h11></label>
                     <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required=""
-                        value="" type="search" maxlength="8" pattern="[0-9]+$" onblur="pesquisacep(this.value);">
+                        value="" type="search" maxlength="8" pattern="[0-9]+$" onblur="pesquisacep(this.value);"> 
+                        <!-- onblur="pesquisacep(this.value);" -->
                 </div>
                 <div class="col-md-4">
                     <label class="form-label control-label" for="Rua">Rua</label>
                     <input id="rua" name="rua" class="form-control" placeholder="" required="" readonly type="text">
                 </div>
                 <div class="col-md-1">
-                    <label class="form-label control-label" for="Rua">N° <h11>*</h11></label>
-                    <input id="numero" name="numero" class="form-control" placeholder="" required="" type="text">
+                    <label class="form-label control-label" for="n">N° <h11>*</h11></label>
+                    <input id="num" name="num" class="form-control" placeholder="" required="" type="text">
                 </div>
             </div>
 
