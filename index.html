@@ -10,7 +10,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="scripts/custom_scripts.js"></script>
-    <script src="scripts/save_data.js"></script>
+    
     <link rel="stylesheet" href="css/custom_style.css">
 </head>
 
@@ -23,7 +23,7 @@
 
     <!-- Div do form de cadastro -->
     <main class="container-xl">
-        <form class="m-3" id="regist">
+        <form id="cadastro" class="form-group m-3">
             <div class="form-row row row-cols-7 g-3 justify-content-center">
                 <!-- Campo nome completo-->
                 <div class="col-md-3">
@@ -66,7 +66,7 @@
                 <!-- Campo email-->
                 <div class="col-md-5">
                     <label class="form-label control-label" for="inputEmail4">Email <h11>*</h11></label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="email@email.com" required=""
+                    <input type="email" class="form-control" id="email" placeholder="email@email.com" required=""
                         type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                 </div>
 
@@ -78,11 +78,11 @@
                 </div>
             </div>
 
-            <div class="form-group row g-3 row-cols-7 justify-content-center">
+            <div class="form-row row row-cols-7 g-3 justify-content-center">
                 <!-- Campo telefone-->
                 <div class="col-md-4">
                     <label class="form-label control-label" for="prependedtext">Telefone <h11>*</h11></label>
-                    <input id="prependedtext" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX"
+                    <input id="telefone" name="prependedtext" class="form-control" placeholder="XX XXXXX-XXXX"
                         type="text" maxlength="13" pattern="\[0-9]{2}\ [0-9]{4,6}-[0-9]{3,4}$"
                         OnKeyPress="formatar('## #####-####', this)" required>
                 </div>
@@ -97,22 +97,21 @@
 
             </div>
 
-            <div class="form-group row row-cols-7 g-3 justify-content-center">
+            <div class="form-row row row-cols-7 g-3 justify-content-center">
                 <div class="col-md-5">
                     <label class="form-label control-label" for="Profissao">Profissão <h11>*</h11></label>
                     <input id="profissao" name="profissao" class="form-control" placeholder="Ex: Professor" required=""
-                        readonly type="text">
+                        type="text">
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-label control-label" for="Renda">Renda Mensal <h11>*</h11></label>
-                    <input id="renda" name="renda" class="form-control" placeholder="R$" required="" readonly
-                        type="text">
+                    <input id="renda" name="renda" class="form-control" placeholder="R$" required="" type="text">
                 </div>
 
             </div>
 
-            <div class="form-group row row-cols-7 g-3 justify-content-center">
+            <div class="form-row row row-cols-7 g-3 justify-content-center">
                 <div class="col-md-2">
                     <label class="form-label control-label" for="CEP">CEP <h11>*</h11></label>
                     <input id="cep" name="cep" placeholder="Apenas números" class="form-control input-md" required=""
@@ -121,7 +120,8 @@
 
                 <div class="col-md-5">
                     <label class="form-label control-label" for="Rua">Rua</label>
-                    <input id="rua" name="rua" class="form-control" placeholder="" required="" readonly type="text">
+                    <input id="rua" name="rua" class="form-control" placeholder="" required="" disabled readonly
+                        type="text">
                 </div>
 
                 <div class="col-md-1">
@@ -131,38 +131,38 @@
                 </div>
             </div>
 
-            <div class="form-group row row-cols-7 g-3 justify-content-center">
+            <div class="form-row row row-cols-7 g-3 justify-content-center">
                 <div class="col-md-4">
                     <label class="form-label control-label" for="Bairro">Bairro</label>
-                    <input id="bairro" name="bairro" class="form-control" placeholder="" required="" readonly
+                    <input id="bairro" name="bairro" class="form-control" placeholder="" required="" disabled readonly
                         type="text">
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-label control-label" for="Cidade">Cidade</label>
-                    <input id="cidade" name="cidade" class="form-control" placeholder="" required="" readonly
+                    <input id="cidade" name="cidade" class="form-control" placeholder="" required="" disabled readonly
                         type="text">
                 </div>
 
                 <div class="col-md-1">
                     <label class="form-label control-label" for="Estado">Estado</label>
-                    <input id="estado" name="estado" class="form-control" placeholder="" required="" readonly
+                    <input id="estado" name="estado" class="form-control" placeholder="" required="" disabled readonly
                         type="text">
                 </div>
             </div>
 
-            <div class="form-group row row-cols-7 justify-content-center">
+            <div class="form-row row row-cols-7 justify-content-center">
                 <div class="d-grid col-md-3 text-center mx-auto m-3">
                     <button type="submit" class="btn btn-info" href="clientes.html">Confirmar</button>
-                </div>                
+                </div>
             </div>
 
-            <div class="form-group row justify-content-center">
+            <!-- <div class="form-group row justify-content-center">
                 <div class="d-grid col-md-2 text-center p-3">
                     <a href="clientes.html" class="btn btn-light">Verificar clientes</a>
                 </div>
-            </div>
-            
+            </div> -->
+
         </form>
 
         <div class="toast-container position-fixed top-0 end-0 p-3">
@@ -177,4 +177,5 @@
     <footer>
 
     </footer>
+    <script src="scripts/save_data.js"></script>
 </body>
