@@ -1,0 +1,14 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+R = O sistema de cloud computing traz vários prós interessantes, como a personalização do serviço de nuvem torna seus custos adaptáveis, e a diminuição dos serviços de manutenção de hardware e software que seriam realizados em contexto On-premise, além da aceleração do processo de desenvolvimento por conta da pré disposição dos servidores em nuvem. Apesar das vantagens apresentadas, o fator segurança ainda deve ser levado em conta, portanto a solução poderia adotar um sistema de nuvem híbrida, onde dados mais sensíveis, como dados pessoais de clientes seriam armezenados em nuvem privada ou On-premise.
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução, responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil? 
+R = Acredito que uma ferramenta que se encaixa bem com o contexto de desenvolvimento ágil, é a ferramenta Jira que traz principalmente uma ótima forma de controle das atividades de desenvolvimento, mas também traz a possibilidade de integração com diversas outras plataformas úteis, como Gitlab e Github para controle de versões, Figma para desenvolvimento de designs de telas, Lucidchart ou Drawio para criação dos diagramas e até Slack e Microsoft Teams para interação entre os membros do time.
+
+3. Você se sente capaz de liderar esta equipe? Por quê? 
+R = Já tive experiências de liderança em projetos de pesquisa e desenvolvimento no âmbito estudantil e em projetos de desenvolvimento independentes. Porém, mesmo com essas experiências e ter estudado disciplinas de gestão na universidade, ainda acredito que me faltam mais estudo na área de gestão e experiências práticas na área de desenvolvimento. Portanto, acredito que com um pouco mais de prática e aprimoramento pessoal serei capaz de realizar tais atividades.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+R = A proposta de projeto é bem interessante já que o cliente (foco principal) será o maior beneficiado pela melhoria na experiência do atendimento. Portanto, considerando o impacto da solução proposta, não há melhoria ou mudança a ser feita.
+
+5. Acha válido esse desafio para o processo que está participando?
+R = A princípio o desafio parece bem pesado, principalmente por conta da quantidade de detalhes e entregáveis, mas acredito que o desafio é bem válido e extremamente necessário para avaliar as capacidades dos candidatos, não somente com relação ao que pode já são capazes de desenvolver, como também a sua capacidade de aprendizado.

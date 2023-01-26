@@ -12,3 +12,6 @@ Os diagramas de arquitetura desenvolvidos com base na problemática proposta for
 Caso seja escolhida a segunda opção, o arquivo referente aos diagramas deve ser adicionado ao Google Drive através de uma conta Google.
 
 O arquivo está contido na [pasta](diagramas).
+
+## Questões levantadas
+As respostas para as questões propostas no arquivo do desafio podem ser encontradas [aqui](Questoes.txt).
